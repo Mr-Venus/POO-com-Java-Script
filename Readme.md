@@ -20,6 +20,9 @@ Cada pasta do repositório representa um projeto, exercício ou atividade desenv
 ## ✅ Checklist
 
 - [x] Introdução à POO com JS
+- [x] Condicionais
+- [x] Strings e Booleanos
+- [x] Arrays
 - [ ] Classes e Objetos
 - [ ] Herança
 - [ ] Polimorfismo
