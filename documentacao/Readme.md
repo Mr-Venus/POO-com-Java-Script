@@ -23,7 +23,8 @@ Cada pasta do repositório representa um projeto, exercício ou atividade desenv
 - [x] Condicionais
 - [x] Strings e Booleanos
 - [x] Arrays
-- [ ] Classes e Objetos
+- [x] Objetos
+- [ ] Classes
 - [ ] Herança
 - [ ] Polimorfismo
 
