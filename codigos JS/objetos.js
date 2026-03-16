@@ -1,3 +1,6 @@
+// Título divisório do treino de objetos
+console.log("\n" + "- ".repeat(6) + "Treino sobre objetos" + "- ".repeat(6) + "\n\n")
+
 // Declarando um objeto
 const usuario = {
     nome: "Diogo",
@@ -89,6 +92,33 @@ function estoque() {
     . Se for falso, exiba: 'Aguardando o hóspede [NOME]'."
 */
 
+function checkIn() {
+    // definição dos hospedes do sistema
+    let hospedes = [
+        {
+            nome: `Juca`,
+            estaPresente: true
+        },
+        {
+            nome: `Larissa`,
+            estaPresente: false
+        },
+        {
+            nome: `Amanda`,
+            estaPresente: true
+        }
+    ]
+
+    // Loop para percorrer o array
+    for (let i = 0; i < hospedes.length; i++) {
+        // verificação e exibição
+        if (hospedes[i].estaPresente == true) {
+            console.log(`Seja bem-vindo(a), ${hospedes[i].nome}!`)
+        } else {
+            console.log(`Aguardando o(a) hóspede ${hospedes[i].nome}.`)
+        }
+    }
+}
 
 
 /*  Comando 3: 
@@ -101,9 +131,33 @@ function estoque() {
     'Postagem Popular!'. Caso contrário, exiba 'Postagem Comum'."
 */
 
+function analista() {
+    const curtidas =
+    { 
+        segunda: 150,
+        terca: 120,
+        quarta: 300,
+        quinta: 80 
+    }
+
+    let curtidasValores = Object.values(curtidas)
+    let totalCurtida = 0
+
+    for (let i = 0; i < curtidasValores.length; i++) {
+        totalCurtida += curtidasValores[i]
+    }
+    if (totalCurtida > 500)
+        console.log(`Post é muito popular! Ele tem ${totalCurtida}💖!\n`)
+    else
+        console.log(`Postagem Comum. Apresenta apenas ${totalCurtida}❤️\n`)
+}
 
 //----------------------------------------------------------------------------------------------------
 // Chamando as funções:
 console.log("\n" + "- ".repeat(6) + "Iniciando os Desafios!" + "- ".repeat(6) + "\n\n")
 console.log("~~~ Estoque De Produtos ~~~\n")
 estoque()
+console.log("\n~~~ Check IN ~~~\n")
+checkIn()
+console.log("\n~~~ Analista De Redes Sociais ~~~\n")
+analista()
