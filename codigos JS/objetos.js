@@ -36,6 +36,7 @@ delete usuario.materias[2]
 
 // exibindo o objeto
 console.log(usuario)
+console.log("\n\n\n\n")
 
 //----------------------------------------------------------------------------------------------------
 
@@ -51,6 +52,32 @@ console.log(usuario)
 */
 
 
+// Declarando minha função de estoque
+function estoque() {
+    // criando meu objeto
+    const estoque = {
+        teclado: 150,
+        mouse: 80,
+        monitor: 900
+    }
+    // Declaração de variáveis
+    let total = 0
+    let arrayValores = Object.values(estoque) // armazenando os valores
+    let arrayEstoque = Object.entries(estoque) // transformando o objeto em array
+
+    // Loop para percorrer e apresentar ao usuário a lista de itens e seus preços
+    for (let i = 0; i < arrayEstoque.length; i++) {
+        console.log(`O produto -> ${arrayEstoque[i][0]} custa: ${arrayEstoque[i][1]}R$.`)
+    }
+
+    // Loop para realizar o somatório dos valores dos produtos
+    for (let i = 0; i < arrayValores.length; i++) {
+        total += arrayValores[i]
+    }
+
+    // Exibição na tela do valor total
+    console.log("-" .repeat(40) + `\nO valor total do nosso estoque é de: ${total}R$ \n` + "-" .repeat(40))
+}
 
 /*  Comando 2:
     --- O Sistema de Check-in ---
@@ -73,3 +100,10 @@ console.log(usuario)
     . Ao final, use um if/else para mostrar uma mensagem: Se a soma for maior que 500, exiba
     'Postagem Popular!'. Caso contrário, exiba 'Postagem Comum'."
 */
+
+
+//----------------------------------------------------------------------------------------------------
+// Chamando as funções:
+console.log("\n" + "- ".repeat(6) + "Iniciando os Desafios!" + "- ".repeat(6) + "\n\n")
+console.log("~~~ Estoque De Produtos ~~~\n")
+estoque()
